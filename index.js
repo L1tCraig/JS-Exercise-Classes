@@ -42,7 +42,20 @@ class Airplane {
   */
   
  class Person {
-    
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+      this.stomach = [];
+      
+      // creator for ob with name age and empty stomach array
+      
+    }
+    eat() {
+      if (this.stomach.length < 10) {this.stomach.push(food)}
+    }
+    poop() {
+      this.stomach = [];
+    }
   }
   
   /*
