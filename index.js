@@ -52,13 +52,13 @@ class Airplane {
     }
     eat(food) {
       this.stomach.length !== 10? this.stomach.push(food):null;
-      }
+      } // is stomach length not ten then push a food if ten return null
     poop() {
      this.stomach = [];
-    }
+    } // when called will return stomach to an empty array
     toString() {
       return `${this.name}, ${this.age}`
-    }
+    } // returns the name and age of the created person
   }
   
   /*
@@ -76,7 +76,18 @@ class Airplane {
   */
   
  class Car {
-    
+    constructor(mod, mpg) {
+      this.model = mod;
+      this.milesPerGallon = mpg;
+      this.tank = 0;
+      this.odometer = 0;
+    }
+    fill(gallons){
+      this.tank = this.tank + gallons;
+    }
+    drive(distance){
+      
+    }
   }
   
   /*
