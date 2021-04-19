@@ -47,14 +47,17 @@ class Airplane {
       this.age = age;
       this.stomach = [];
       
-      // creator for ob with name age and empty stomach array
+      // creator for obj with name age and empty stomach array
       
     }
-    eat() {
-      if (this.stomach.length < 10) {this.stomach.push(food)}
-    }
+    eat(food) {
+      this.stomach.length !== 10? this.stomach.push(food):null;
+      }
     poop() {
-      this.stomach = [];
+     this.stomach = [];
+    }
+    toString() {
+      return `${this.name}, ${this.age}`
     }
   }
   
