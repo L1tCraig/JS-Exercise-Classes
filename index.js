@@ -143,15 +143,15 @@ class Airplane {
  class Instructor extends Lambdasian{
    constructor(info){
      super(info);
-     this.specialty = 'linguistic interpretation';
-     this.favLanguage = 'JavaScript';
-     this.catchPhrase = 'Everything is possible with code';
+     this.specialty = info.specialty;
+     this.favLanguage = info.favLanguage;
+     this.catchPhrase = info.catchPhrase;
    }
    demo(subject){
      return `Today we are learning about ${subject}`;
    }
    grade(student, subject){
-     
+     return `${student.name} receives a perfect score on ${subject}`;
    }
  }
   /*
