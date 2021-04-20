@@ -176,6 +176,16 @@ class Airplane {
     this.className = info.className;
     this.favSubjects = info.favSubjects;
   }
+  listSubjects(){
+    return `Loving ${this.favSubjects.toString()}!`;
+  } // this above was so satisfying thought i could
+    // so i tried and it worked !!
+    PRAssignment(subject){
+      return `${this.name} has submitted a PR for ${subject}`;
+    }
+    sprintChallenge(subject){
+      return `${this.name} has begun sprint challenge on ${subject}`
+    }
  }
   
   /*
