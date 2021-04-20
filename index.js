@@ -75,34 +75,33 @@ class Airplane {
           + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
   */
   
- class Car {
-    constructor(mod, mpg) {
-      this.model = mod;
-      this.milesPerGallon = mpg;
-      this.tank = 0;
-      this.odometer = 0;
-    }
-    fill(gallons){
-      this.tank = this.tank + gallons;
-    }
-    drive(distance){
-      let trip = distance/this.milesPerGallon;
-      for (let i = 0; i = trip; i++){
-        if (this.tank > 0) {
-          this.tank = this.tank - 1;
-          this.odometer = this.odometer + this.milesPerGallon;
-        } else {
-          return `I ran out of fuel at ${this.odometer} miles!`;
-        }
-      }
-
-      
-      //this.tank = this.tank - (distance/this.milesPerGallon);
-   // if (this.tank = 0){
-  //    return `I ran out of fuel at ${this.odometer} miles!`
-    }
-  }
-  
+          class Car {
+            constructor(mod, mpg) {
+              this.model = mod;
+              this.milesPerGallon = mpg;
+              this.tank = 0;
+              this.odometer = 0;
+            }
+            fill(gallons) {
+              this.tank = this.tank + gallons;
+            }
+            drive(distance) {
+              for (let i = 0; (i = distance); i++) {
+                let check = this.odometer / this.milesPerGallon;
+                if (this.tank = 0){
+                  this.odometer = this.odometer + 1;
+                  return `I ran out of fuel at ${this.odometer} miles!`;
+              } else if (check - Math.floor(check) !== 0) {
+                  this.odometer = this.odometer + 1;
+                } else if (check - Math.floor(check) === 0) {
+                  this.odometer = this.odometer + 1;
+                  this.tank = this.tank - 1; 
+                }
+              }
+            }
+          }
+          
+ 
   /*
     TASK 3
       - Write a Lambdasian class.
