@@ -73,7 +73,7 @@ class Airplane {
           + Should cause the the `tank` to go down taking `milesPerGallon` into account.
       - A car which runs out of `fuel` while driving can't drive any more distance:
           + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
-  */
+  */ // troublesome cars
   
           class Car {
             constructor(mod, mpg) {
@@ -89,7 +89,6 @@ class Airplane {
               for (let i = 0; (i = distance); i++) {
                 let check = this.odometer / this.milesPerGallon;
                 if (this.tank = 0){
-                  this.odometer = this.odometer + 1;
                   return `I ran out of fuel at ${this.odometer} miles!`;
               } else if (check - Math.floor(check) !== 0) {
                   this.odometer = this.odometer + 1;
