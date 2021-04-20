@@ -89,7 +89,6 @@ class Airplane {
               for (let i = 0; (i = distance); i++) {
                 let check = this.odometer / this.milesPerGallon;
                 if (this.tank = 0){
-                  this.odometer = this.odometer + 1;
                   return `I ran out of fuel at ${this.odometer} miles!`;
               } else if (check - Math.floor(check) !== 0) {
                   this.odometer = this.odometer + 1;
