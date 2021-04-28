@@ -86,16 +86,12 @@ class Airplane {
               this.tank = this.tank + gallons;
             }
             drive(distance) {
-              for (let i = 0; (i = distance); i++) {
-                let check = this.odometer / this.milesPerGallon;
-                if (this.tank = 0){
-                  return `I ran out of fuel at ${this.odometer} miles!`;
-              } else if (check - Math.floor(check) !== 0) {
+              for (let i = 0; i = distance; i++) {
+                if (this.tank > 0) {
                   this.odometer = this.odometer + 1;
-                } else if (check - Math.floor(check) === 0) {
-                  this.odometer = this.odometer + 1;
-                  this.tank = this.tank - 1; 
-                }
+                  gpm = 1 / this.milesPerGallon;
+                  this.tank = this.tank - gpm; 
+                  } else {return `I ran out of fuel at ${this.odometer} miles!`;}
               }
             }
           }
