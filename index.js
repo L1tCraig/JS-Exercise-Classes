@@ -80,19 +80,21 @@ class Airplane {
               this.model = mod;
               this.milesPerGallon = mpg;
               this.tank = 0;
-              this.odometer = 0;
+              this.odometer = 0; /* this will create a vehicle with a model name a mpg rating, empty tank and a 0 odm */
             }
             fill(gallons) {
-              this.tank = this.tank + gallons;
+              this.tank = this.tank + gallons; /* calling this fill will allow an ammount of fuel to be added to the tank */
             }
             drive(distance) {
-              for (let i = 0; i = distance; i++) {
-                if (this.tank > 0) {
-                  this.odometer = this.odometer + 1;
-                  gpm = 1 / this.milesPerGallon;
-                  this.tank = this.tank - gpm; 
-                  } else {return `I ran out of fuel at ${this.odometer} miles!`;}
-              }
+              let trip = this.milesPerGallon * this.tank; /* this allows thie tank to be calculated to the distance */
+              if(trip > distance){
+                this.odometer += distance;
+                this.tank = (trip - distance) / this.milesPerGallon;
+              /* this section will return the odometer to the distance traveled and the tank to subtract the distance traveled using the trip calculation */} else {
+                this.tank = 0;
+                this.odometer = trip;
+                return `I ran out of fuel at ${this.odometer} miles!`
+              /* when the distance is not greater than how much the tank lasts for will return an empty tank an odomiter at the limit of the tank with an empty at x distance message as requested... this was a personal mountain to realize that to have a passing result from an employer you cant always have the function return what you want but rather just what the customer or boss requests. flair is ok some times but humble yourself and write good clean code... */}
             }
           }
           
